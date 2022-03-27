@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Sticker_0._2.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="font" Type="System.String" Scope="User">
+      <Value Profile="(Default)">PF Scandal Pro Black</Value>
+    </Setting>
+    <Setting Name="font_size" Type="System.String" Scope="User">
+      <Value Profile="(Default)">24</Value>
+    </Setting>
+    <Setting Name="font_color" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#000000</Value>
+    </Setting>
+    <Setting Name="list_color" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#fff79a</Value>
+    </Setting>
+    <Setting Name="minut" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="X" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="Y" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

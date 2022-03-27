@@ -1,0 +1,76 @@
+﻿<Window x:Class="Sticker_0._2.settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:variables="clr-namespace:Sticker_0._2.Properties"
+        
+        mc:Ignorable="d"
+        Title="Settings"  ResizeMode="NoResize" ShowInTaskbar ="False" Width="240" Height="249">
+    <WrapPanel Orientation="Vertical" Margin="5,5,5,5">
+        <GroupBox Header="Font" FontSize="14" Width="230">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition Width="0.7*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" Content="font"  FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" Width="37"/>
+                <ComboBox x:Name="font_box" Grid.Row="0" HorizontalAlignment="Left" Width="116" Height="20" Margin="65,3,0,3" Grid.ColumnSpan="2"/>
+
+                <Label Grid.Row="1" Grid.Column="0" Content="size"  FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBox x:Name="text_size"
+                         Text="{Binding Source={x:Static variables:Settings.Default}, Path=font_size}"
+                         Grid.Row="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="20" Margin="65,3,91,3" Grid.ColumnSpan="2"/>
+
+                <Label Grid.Row="2" Grid.Column="0" Content="color" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+                    <Ellipse x:Name="color1"
+                             Fill="{Binding Source={x:Static variables:Settings.Default}, Path=font_color}"
+                             Width="20" Height="20" StrokeThickness="2" Stroke="Gray"/>
+                    <TextBox x:Name="color_font"
+                             Text="{Binding Source={x:Static variables:Settings.Default}, Path=font_color}"
+                             Width="95" Margin="2,0,0,0" Height="17" TextChanged="colorFont_TextChanged" FontSize="12" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+                </StackPanel>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Additional" FontFamily="14" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition Width="0.7*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Content="list color"  FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="24" Width="65"/>
+                <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                    <Ellipse x:Name="color2"
+                             Fill="{Binding Source={x:Static variables:Settings.Default}, Path=list_color}"
+                             Width="20" Height="20" StrokeThickness="2" Stroke="Gray"/>
+                    <TextBox x:Name="color_list"
+                             Text="{Binding list_color, Source={x:Static variables:Settings.Default}}"
+                             Width="97" Margin="2,0,0,0" FontSize="12" Height="17" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" TextChanged="colorList_TextChanged"/>
+                </StackPanel>
+
+                <Label Grid.Row="1" Grid.Column="0" Content="minut"  FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" Height="24" Width="41"/>
+                <TextBox x:Name="minut"
+                         Text="{Binding minut, Source={x:Static variables:Settings.Default}}"
+                         Grid.Row="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="1,3,94,2" Grid.Column="1" />
+            </Grid>
+        </GroupBox>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0, 5, 0, 0">
+            <Button x:Name="ok" Content="Ok" Width="40" Click="ok_Click"/>
+            <Button x:Name="factorySettings" Content="Rest" Margin="10,0,0,0" Width="40" Click="factorySettings_Click"/>
+            <Button x:Name="cancel" Content="Cancel" Margin="10,0,0,0" Width="40" Click="cancel_Click"/>
+        </StackPanel>
+    </WrapPanel>
+</Window>

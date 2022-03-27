@@ -1,0 +1,63 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Sticker_0._2</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Button off.png" />
+    <None Remove="Resources\Button on.png" />
+    <None Remove="Resources\duplicate.png" />
+    <None Remove="Resources\exit.png" />
+    <None Remove="Resources\gear wheel.png" />
+    <None Remove="Resources\notepad.png" />
+    <None Remove="Resources\scissors.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Button off.png" />
+    <Resource Include="Resources\Button on.png" />
+    <Resource Include="Resources\duplicate.png" />
+    <Resource Include="Resources\exit.png" />
+    <Resource Include="Resources\gear wheel.png" />
+    <Resource Include="Resources\notepad.png" />
+    <Resource Include="Resources\scissors.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Update="Resource1.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resource1.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
